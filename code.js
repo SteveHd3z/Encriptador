@@ -69,8 +69,10 @@ async function copiar(){
 }
 
 function validar(msn){
-    
-    if(msn==msn.toLowerCase()){
+
+    if(msn==""){
+        alert("Debe Ingresar un texto en el campo");        
+    }else if(msn==msn.toLowerCase()){
         return true;
     }else{
         alert("El Texto debe Estar en Minuscula");

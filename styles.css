@@ -24,7 +24,7 @@ header{
 .contenedorP{
     display: flex;
     justify-content: space-evenly;
-    width: 1240px;
+    width: auto;
     height: 650px;
     margin: 0 20px;
 }
