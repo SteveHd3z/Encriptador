@@ -253,20 +253,26 @@ footer{
 
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:480px){ 
+    
+    body{
+        overflow-x: hidden;
+    }
 
     .principal{
-        height: 650px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .area{
         width: 80%;
     }
 
-    .btn-Encriptar, .btns{
+    .btn-Encriptar,
+    .btns{
         width: 90%;
         margin-bottom: 1rem;
-
     }
 
     h3{
@@ -275,12 +281,13 @@ footer{
 
     .rectangle{
         width: 80%;
+        height: 450px;
     }
 
     .result{
         display: flex;
         width: 80%;
-        padding-top: 40px;
+        padding-top: 60px;
     }    
 
     #btnCopiar{
@@ -310,28 +317,46 @@ footer{
     }
 
     .principal{
-        height: 650px;
+        height: 550px;
     }
 
     .area{
-        height: 60%;
-        margin-right: 0;
+        max-height: 60%;
+        margin: 2rem 3rem;
+        width: auto;
     }
 
     #intro{
         position: relative;
         top: 80px;
-    }    
-
-    .result{
-        max-width: 100%;
-        background-color: white;
+    } 
+    
+    .rectangle{
+        margin-left: 3rem;
+        margin-top: 10%;
+        width: 78%;
+        padding-top: 15%;
     }
 
-    #btn-Copiar{
+    .result{
+        width: auto;
+        background-color: white;
+        padding: 0;
+        margin: 0;
+        height: 350px;
+    }
+
+    .btn-Copiar{
+        margin-top: 1.rem;
+    }
+
+    #btnCopiar{
+        position: static;
+        top: 50px;
         width: 100%;
+        height: 50px;
         background: #ffffff;
-        margin: 0 auto;
+        margin: 0 auto;        
     }
 
     p{

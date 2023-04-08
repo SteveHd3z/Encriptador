@@ -16,7 +16,9 @@ function encriptar(){
 
     var mensaje=inputMensaje.value;
 
-    if(validar(mensaje)){
+    if(validarText(mensaje)){
+
+        validarScreen();
 
         var cifrado=mensaje.replaceAll("e","enter"); 
         var cifrado=cifrado.replaceAll("i","imes"); 
@@ -37,7 +39,9 @@ function desEncriptar(){
 
     var mensaje=inputMensaje.value; 
     
-    if(validar(mensaje)){
+    if(validarText(mensaje)){
+
+        validarScreen();
 
     var cifrado=mensaje.replaceAll("enter","e"); 
     var cifrado=cifrado.replaceAll("imes","i"); 
@@ -68,7 +72,7 @@ async function copiar(){
     
 }
 
-function validar(msn){
+function validarText(msn){
 
     if(msn==""){
         alert("Debe Ingresar un texto en el campo");        
@@ -81,6 +85,15 @@ function validar(msn){
 
 function limpiarCampo(){
     document.getElementById('msn').value='';
+}
+
+function validarScreen(){               //Cuando damos click en btn-Encriptar salta la pantalla a un punto de resolucion definido.
+    
+    if(screen.width<=375){
+        scroll(0 , 560);
+    }else if(screen.width>375 && screen.width<=768){
+        scroll(0 , 650);
+    }
 }
 
 btnEncriptar.onclick=encriptar;
