@@ -53,12 +53,19 @@ function desEncriptar(){
     
 }
 
-function copiar(){
+async function copiar(){
 
-    var msn=inputResultado.value;
-    navigator.clipboard.writeText(msn); 
-    alert("Se Copió el Mensaje Encriptado");
-    limpiarCampo();
+    try {
+        
+        var msn=inputResultado.value;
+
+        await navigator.clipboard.writeText(msn); 
+        alert("Se Copió el Mensaje Encriptado");
+        limpiarCampo();
+    } catch (error) {
+        alert("Se produjo un error al copiar el texto: ",error);
+    }
+    
 }
 
 function validar(msn){
